@@ -35,9 +35,7 @@ namespace AutomationResources
         {
             //If the outputDirectory is null, a new exception will be thrown
             //Otherwise, we will concatenate the path and create the correct one
-            return Path.GetFullPath(Path.Combine(
-                                outPutDirectory ?? throw new InvalidOperationException(),
-                                @"..\..\..\AutomationResources\bin\Debug"));
+            return Path.GetFullPath(Path.Combine(outPutDirectory, @"..\..\..\AutomationResources\bin\Debug"));
         }
 
         private static string CreateFilePathForNetCoreApps(string outPutDirectory)
